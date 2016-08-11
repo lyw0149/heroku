@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for svb_facebook_counter/server.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">svb_facebook_counter/</a> server.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var webpack = require('webpack')
+// var webpackDevMiddleware = require('webpack-dev-middleware')
+// var webpackHotMiddleware = require('webpack-hot-middleware')
+var bodyParser = require("body-parser")
+var config = require('./webpack.config')
+<span class="cstat-no" title="statement not covered" >var request = require('request')</span>
+<span class="cstat-no" title="statement not covered" >var http = require('http')</span>
+<span class="cstat-no" title="statement not covered" >var ejs = require('ejs')</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >var app = new(require('express'))()</span>
+<span class="cstat-no" title="statement not covered" >var port = 3000</span>
+&nbsp;
+// var compiler = webpack(config)
+// app.use(webpackDevMiddleware(compiler, {
+// 	noInfo: true,
+// 	publicPath: config.output.publicPath
+// }))
+// app.set('view engine', 'ejs')
+// app.use(webpackHotMiddleware(compiler))
+<span class="cstat-no" title="statement not covered" >app.use(bodyParser.json());</span>
+<span class="cstat-no" title="statement not covered" >app.use(bodyParser.urlencoded({ extended: true }));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >app.get("/", <span class="fstat-no" title="function not covered" >function (req, res) {</span></span>
+<span class="cstat-no" title="statement not covered" >	res.sendFile(__dirname + '/src/index.html')</span>
+})
+<span class="cstat-no" title="statement not covered" >app.get("/welcome", <span class="fstat-no" title="function not covered" >function (req, res) {</span></span>
+<span class="cstat-no" title="statement not covered" >	res.redirect('/');</span>
+})
+&nbsp;
+&nbsp;
+//temporary global variable for store user visit data.
+<span class="cstat-no" title="statement not covered" >var visitData = {}</span>
+&nbsp;
+&nbsp;
+//for get accessToken from client -&gt; save to Buffer (devide user)
+//params : accessToken, userID
+<span class="cstat-no" title="statement not covered" >app.post('/welcome', <span class="fstat-no" title="function not covered" >function (req, res) {</span></span>
+&nbsp;
+	//console.log(req.body);
+<span class="cstat-no" title="statement not covered" >	var accessToken = req.body.accessToken;</span>
+<span class="cstat-no" title="statement not covered" >	var userID = req.body.userID;</span>
+<span class="cstat-no" title="statement not covered" >	var options = {</span>
+		url: 'https://graph.facebook.com/' + userID + '?access_token=' + accessToken,
+		headers: {
+			'User-Agent': 'request'
+		}
+	};
+<span class="fstat-no" title="function not covered" >	function callback(error, response, body) {</span>
+<span class="cstat-no" title="statement not covered" >		if (!error &amp;&amp; response.statusCode == 200) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			var userData = JSON.parse(body);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			if(visitData[userData.id] == null){</span>
+<span class="cstat-no" title="statement not covered" >				visitData[userData.id] =1;</span>
+			}else{
+<span class="cstat-no" title="statement not covered" >				visitData[userData.id] ++;</span>
+			}
+<span class="cstat-no" title="statement not covered" >			console.log(visitData);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			res.send( "Hello,"+ userData.name+", &lt;br&gt;" + "You have visited "+ visitData[userData.id] +" times today.");</span>
+		}
+	}
+<span class="cstat-no" title="statement not covered" >	request(options, callback);</span>
+&nbsp;
+})
+//-----end of POST /FBAT
+&nbsp;
+&nbsp;
+//start server
+<span class="cstat-no" title="statement not covered" >app.listen(port, <span class="fstat-no" title="function not covered" >function (error) {</span></span>
+<span class="cstat-no" title="statement not covered" >	if (error) {</span>
+<span class="cstat-no" title="statement not covered" >		console.error(error)</span>
+	} else {
+<span class="cstat-no" title="statement not covered" >		console.info("==&gt; 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)</span>
+	}
+})
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 11 2016 17:32:53 GMT+0900 (KST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
