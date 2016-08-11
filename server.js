@@ -66,10 +66,10 @@ app.post('/welcome', function (req, res) {
 
 
 //start server
-app.listen(port, function (error) {
+app.listen(process.env.PORT || 3000, function (error) {
 	if (error) {
 		console.error(error)
 	} else {
-		console.info("==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
+		console.info("==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", process.env.PORT || 3000, process.env.PORT || 3000)
 	}
 })
