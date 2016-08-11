@@ -56,7 +56,7 @@ app.post('/welcome', function (req, res) {
 			}
 			console.log(visitData);
 
-			res.send( "<div style = "padding : 200px"><p style = "font-size : 20px"> Hello,"+ userData.name+", <br>" + "You have visited "+ visitData[userData.id] +" times today. <p></div>");
+			res.send( "<div style = 'padding : 200px'><p style = 'font-size : 20px'> Hello,"+ userData.name+", <br>" + "You have visited "+ visitData[userData.id] +" times today. <p></div>");
 		}
 	}
 	request(options, callback);
