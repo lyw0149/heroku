@@ -56,7 +56,7 @@ app.post('/welcome', function (req, res) {
 			}
 			console.log(visitData);
 
-			res.send( "Hello,"+ userData.name+", <br>" + "You have visited "+ visitData[userData.id] +" times today.");
+			res.send( "<div> Hello,"+ userData.name+", <br>" + "You have visited "+ visitData[userData.id] +" times today. </div>");
 		}
 	}
 	request(options, callback);

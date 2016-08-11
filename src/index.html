@@ -6,6 +6,18 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
     <meta charset="UTF-8">
+    <style>
+    #align {
+width:100%;
+text-align:center;
+}
+
+#content {
+margin:0 auto; /*위에서 센터로 놨음에도 또 이걸 해 주는 건 IE외의 다른 브라우저에선 이게 없으면 다시 왼쪽으로 붙기 때문이에요*/
+width:750px; /*이건 임의값입니다. 쓰실 데로 수정하세요*/
+text-align:left;
+}
+    </style>
 </head>
 
 <body>
@@ -130,10 +142,14 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
+<div id="align">
+<div id="content">
+  <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
 
-    <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+  <div id="status">
+</div>
+</div>
 
-    <div id="status">
     </div>
     <div id="root">
 
